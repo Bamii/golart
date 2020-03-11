@@ -3,7 +3,7 @@ package main
 
 import (
 	"image"
-	"tuts/lissajous/chars"
+	"github.com/bamii/somy/chars"
 )
 
 func drawBar(img *image.Paletted, x, y int, breadth, length int, present bool) {
@@ -54,7 +54,7 @@ func drawArray(array []int, img *image.Paletted, present int) {
 	// loop through the array.
 	for i, value := range array {
 		drawBar(
-			img, // image written
+			img, // image to be written
 			lee + xPadding - 5, yPadding - 15, // x, y
 			value * xscale, barWidth,
 			i == present,
